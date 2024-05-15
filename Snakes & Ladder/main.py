@@ -35,5 +35,5 @@ if __name__ == "__main__":
         top, bottom = input("Enter the location of the ladder's top and bottom").split()
         ladders.append((int(bottom), int(top)))
 
-    game = Game(100, players, snakes, ladders)
+    game = Game(100, players, snakes, ladders, dice_count=1)
     game.start_game()
