@@ -5,9 +5,15 @@ class Board:
         self.ladders = {}
 
     def add_snake(self, head, tail):
+        if tail >= head:
+            print("Did not add snake as tail of snake can't be equal or above head")
+            return
         self.snakes[head] = tail
 
     def add_ladder(self, bottom, top):
+        if bottom >= top:
+            print("Did not add ladder as bottom of ladder can't be equal or above top")
+            return
         self.ladders[bottom] = top
 
     def move_player(self, player, steps):
